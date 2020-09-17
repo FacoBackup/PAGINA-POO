@@ -1,0 +1,211 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../../CSS/STYLESHEET.CSS">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Conceitos POO</title>
+
+    <nav>
+        <ul class="container-nav">
+            <li class=" right">
+                <h6 class="item-nav TEXT-UPPERCASE font-weight-bold"><a class=" text-dark"
+                        href="../about.html">Sobre</a>
+                </h6>
+            </li>
+            <li class=" right">
+                <h6 class="item-nav TEXT-UPPERCASE font-weight-bold"><a class=" text-dark"
+                        href="../projects.html">Projetos</a></h6>
+            </li>
+            <li class=" right">
+                <h6 class="item-nav TEXT-UPPERCASE font-weight-bold"><a class=" text-dark "
+                        href="../../index.html">Início</a></h6>
+            </li>
+
+            <li class=" left">
+                <h6 class="item-nav TEXT-UPPERCASE font-weight-bold logo">Projeto POO</h6>
+            </li>
+        </ul>
+    </nav>
+</head>
+
+<body class="bg-light">
+    <div class="container-title">
+
+        <h1 class="text-dark font-weight-bold m-auto text-center ">Conceitos da Programação orientada objeto</h1>
+
+    </div>
+
+
+    <div class="card m-auto">
+        <img src="../../IMAGES/oop.jpeg" alt="damn-boy" class="card-img-top  w-75 h-75 m-auto">
+        <div class="card-footer">
+            <p class="card-text text-secondary ">Por: Gustavo Roque</p>
+        </div>
+    </div>
+
+
+    <article class="container-table w-50 ">
+        <h1 class="m-auto text-h text-center">Principais conceitos:</h1>
+        <br>
+        <ul>
+            <li>
+                <h4 class="m-auto text-h ">Encapsulamento:</h4>
+            </li>
+            <ul>
+                <li>
+                    <p class="text-secondary first-letter">Tem como objetivo juntar um grupo de variáveis e funções.
+                        relacionadas em uma unidade, chamada de OBJETO, chamamos as variáveis de PROPRIEDADES e as
+                        funções de MÉTODOS.
+                        Como exemplo podemos pensar uma (classe) Processador, em tal temos as propriedades: modelo,
+                        processo e frequência. Como métodos possuímos: computar(), parar-processos() e recomeçar().</p>
+                </li>
+            </ul>
+
+            <li>
+                <h4 class="m-auto text-h ">Abstração:</h4>
+            </li>
+            <ul>
+                <li>
+                    <p class="text-secondary first-letter">Imagine um carro, quando você gira a chave ou aperta um
+                        botão, ele liga e faz oque devia fazer, e você não precisa se preocupar com oque esta
+                        acontecendo em baixo do capô, podemos relacionar esta ideia com o conceito de abstração de POO,
+                        nos podemos esconder certos métodos de um objeto do que esta acontecendo por fora e isso nos da
+                        a capacidade de termos uma interface externa mais simples para este objeto, este conceito também
+                        ajuda a reduzir o impacto de mudanças, caso mudarmos tais métodos abstratos, o código externo
+                        não vera mudanças, pois tais métodos não estão expostos para o mundo fora de seu “contêiner”.
+                    </p>
+                </li>
+            </ul>
+            <li>
+                <h4 class="m-auto text-h ">Herança:</h4>
+            </li>
+            <ul>
+                <li>
+                    <p class="text-secondary first-letter">Herança é uma forma/mecanismo de evitar códigos redundantes.
+                        Um exemplo: <br><br> cachorro.<br> Leao.<br> Gato.<br><br> Cada um deles faz um som e anda,
+                        além de possuírem um tamanho específico e cor predominante, com isso podemos construir uma
+                        classe genérica Animal, que possuí propriedades de cor-predominante e tamanho, tal também possuí
+                        Os métodos som() e velocidade(). Com a classe genérica podemos fazer uma ligação entre esses 3
+                        Animais, tal ligação e chamada de herança.</p>
+                </li>
+            </ul>
+            <li>
+                <h4 class="m-auto text-h ">Polimorfismo:</h4>
+            </li>
+            <ul>
+                <li>
+                    <p class="text-secondary first-letter">Polimorfismo significa muitas formas, em POO polimorfismo é
+                        uma técnica que permite você remover grandes junções de if e else ou múltiplos case e switch,
+                        como citado no tópico anterior, cada animal possuí uma forma de emitir som e uma velocidade
+                        especifica, se fossemos colocar isso diretamente num código, ficaria algo como:<br>
+                        <br>
+                        switch(...) {<br>
+                        case gato: somGato()<br>
+                        case leão: somLeao()<br>
+                        case cachorro: somCachorro()<br>
+                        }<br><br>
+
+                        Com polimorfismo nos podemos criar um único método som() que vai agir de acordo com o tipo do
+                        objeto referenciado. </p>
+                </li>
+            </ul>
+        </ul>
+        <br>
+
+        <h1 class="m-auto text-h text-center">benefícios da POO:</h1>
+        <br>
+        <p class="text-secondary first-letter">Com o que foi passado para vocês anteriormente podemos concluir que a POO
+            Com o encapsulamento permite reduzir a complexidade de um programa e aumentar a usabilidade de certos
+            métodos, com abstração
+            Reduzimos mais ainda a complexidade e isolamos o impacto de mudanças, com herança eliminamos códigos
+            Repetidos e com polimorfismo podemos remover o excesso de statements de if e else bem como switch e case.
+        </p>
+
+        <br>
+        <ul>
+            <li>
+                <h4 class="m-auto text-h ">Outros benefícios:</h4>
+            </li>
+            <ul>
+                <li>
+                    <p class="text-secondary first-letter">Evitar a compartilhação de estados mutáveis com:
+                        Encapsulamento e o isolamento de objetos de mudanças locais. A única forma de alterar/afetar
+                        outro estado de um objeto é mandando uma “mensagem” para que tal seja alterado. A mudança de
+                        estados são controladas localmente, num nível celular ao invés de serem expostas e terem um
+                        Acesso compartilhado./p>
+                </li>
+                <li>
+                    <p class="text-secondary first-letter">Dissociação de um objeto do outro, o enviador de uma mensagem
+                        é
+                        unicamente ligado com o recebedor da mensagem, por uma API.</p>
+                </li>
+                <li>
+                    <p class="text-secondary first-letter">Adaptação e a capacidade de retornar a forma original apos
+                        mudanças.</p>
+                </li>
+
+            </ul>
+        </ul>
+
+
+        <p class="text-secondary first-letter">Tais pontos são bastante importantes no mundo de hoje com o avanço da
+            <a href="https://www.omnisci.com/technical-glossary/parallel-computing#:~:text=Parallel%20computing%20refers%20to%20the,part%20of%20an%20overall%20algorithm"
+                class="text-dark">computação paralela</a>
+            onde possuímos vários núcleos com objetivo de entregar um resultado final com maior velocidade, o maior
+            exemplo de computação paralela esta nas placas gráficas onde é necessário bastante poder de processamento
+            Para completar a renderização de uma imagem 3d, tais possuem centenas a milhares de núcleos todos
+            Trabalhando em conjunto para atingir um objetivo final, sem a POO seria basicamente impossível ter alcançado
+            o nível de performance que estamos nos dias atuais.</p>
+        <p class="text-secondary first-letter"> </p>
+        <br>
+
+        <h1 class="m-auto text-h text-center">Fontes</h1>
+        <br>
+        <p class="text-secondary"><a
+                href="https://medium.com/javascript-scene/the-forgotten-history-of-oop-88d71b9b2d9f#:~:text=%E2%80%9CObject%2DOriented%20Programming%E2%80%9D%20(,his%20Sketchpad%20Thesis%20in%201963."
+                class="text-dark">https://medium.com/javascript-scene/the-forgotten-history-of-oop-88d71b9b2d9f#:~:text=%E2%80%9CObject%2DOriented%20Programming%E2%80%9D%20(,his%20Sketchpad%20Thesis%20in%201963.</a>
+        </p>
+        <p class="text-secondary">
+            <a href=" https://www.youtube.com/watch?v=pTB0EiLXUC8&ab_channel=ProgrammingwithMosh" class="text-dark">
+                https://www.youtube.com/watch?v=pTB0EiLXUC8&ab_channel=ProgrammingwithMosh.</a>
+        </p>
+
+
+    </article>
+
+    <br>
+    <footer>
+        <table class="table-align ">
+            <tr>
+                <th>
+                    <p class="font-weight-light text-center Text-Capitalized text-secondary"><a class="text-secondary"
+                            href="../about.html">Entre em contato.</a></p>
+                </th>
+                <th>
+                    <p class="font-weight-light text-center Text-Capitalized text-secondary">
+                        @2020Brasilia</p>
+                </th>
+            </tr>
+        </table>
+
+    </footer>
+</body>
+
+</html>
