@@ -10,7 +10,9 @@
     font-size: 200%;
 
 }
-
+.no-dot{
+    list-style-type: none;
+}
 .item-nav {
     display: block;
     padding: 20px;

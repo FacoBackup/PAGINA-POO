@@ -1,0 +1,166 @@
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="../../CSS/STYLESHEET.CSS">
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <title>Postman</title>
+
+    <nav>
+        <ul class="container-nav">
+            <li class=" right">
+                <h6 class="item-nav TEXT-UPPERCASE font-weight-bold"><a class=" text-dark"
+                        href="../about.html">Sobre</a>
+                </h6>
+            </li>
+            <li class=" right">
+                <h6 class="item-nav TEXT-UPPERCASE font-weight-bold"><a class=" text-dark"
+                        href="../projects.html">Projetos</a></h6>
+            </li>
+            <li class=" right">
+                <h6 class="item-nav TEXT-UPPERCASE font-weight-bold"><a class=" text-dark "
+                        href="../../index.html">Início</a></h6>
+            </li>
+
+            <li class=" left">
+                <h6 class="item-nav TEXT-UPPERCASE font-weight-bold logo">Projeto POO</h6>
+            </li>
+        </ul>
+    </nav>
+</head>
+
+<body class="bg-light">
+    <div class="container-title">
+
+        <h1 class="text-dark font-weight-bold m-auto text-center ">Encapsulamento</h1>
+
+    </div>
+
+
+
+    <div class=" m-auto">
+        <div class="card  m-auto">
+            <img src="../../IMAGES/encapsulamento.png" alt="damn-boy" class="card-img-top ">
+            <div class="card-footer">
+                <p class="card-text text-secondary ">Por: Gustavo Roque</p>
+            </div>
+        </div>
+    </div>
+    <article class="container-table w-50">
+        <h1 class="m-auto text-h text-center">Entendendo o conceito de Encapsulamento</h1>
+        <p class=" first-letter  text-secondary">Como citado em um artigo anterior o encapsulamento visa (como o nome já
+            diz) manter tudo de uma determinada área dentro de uma capsula/contêiner. Dentro desta capsula podemos
+            incluir variáveis, métodos, constantes etc. Porem todas devem estar relacionadas entre si para que o
+            conceito esteja realmente sendo aplicado. Um exemplo:</p>
+
+        <div class="card bg-dark w-50 m-auto">
+            <p class="text-light font-weight-bold">fun main(){</p>
+            <ul class="no-dot text-light">
+                <li>var salario = 0.00</li>
+                <li>var salario-minimo = 1050.98</li>
+                <li>var hora-extra = 10</li>
+                <li>var frequencia = 15</li>
+                <li>salario = calculaSalario ( salario-minimo , hora-extra, frequencia)</li>
+            </ul>
+            <p class="text-light font-weight-bold">}</p>
+            <p class="text-light font-weight-bold">fun calculaSalario ( salario-minimo , hora-extra, frequencia) :
+                Double{</p>
+            <ul class="no-dot text-light">
+                <li>return salario-minimo + ( hora-extra * frequencia).toDouble()</li>
+            </ul>
+            <p class="text-light font-weight-bold">}</p>
+
+
+
+
+
+
+
+        </div>
+        <p class=" first-letter  text-secondary">Este pedaço de código é representativo do método procedural de
+            programação, onde nós iniciamos as variáveis no início do programa e depois chamamos a função para calcular
+            o que desejamos. Agora um exemplo em orientado objeto usando encapsulamento:</p>
+
+        <div class="card bg-dark w-50 m-auto">
+            <p class="text-light font-weight-bold">class empregado {</p>
+
+            <ul class="no-dot text-light">
+
+                <li>var salario-minimo = 1050.98</li>
+                <li>var hora-extra = 10</li>
+                <li>var frequencia = 15</li>
+                <li>fun calculaSalario () : Double{</li>
+                <ul class="no-dot">
+                    <li>return salario-minimo + ( hora-extra * frequencia).toDouble()</li>
+                </ul>
+                <li>}</li>
+                <li></li>
+
+            </ul>
+            <p class="text-light font-weight-bold">}</p>
+            <br>
+            <p class="text-light font-weight-bold">fun main(){</p>
+            <ul class="no-dot text-light">
+                <li>var usuario = empregado()</li>
+                <li>println(usuario.calculaSalario())</li>
+
+            </ul>
+            <p class="text-light font-weight-bold">}</p>
+
+        </div>
+        <p class=" first-letter  text-secondary">Nesta parte podemos ver que com a classe empregado podemos criar
+            inúmeros outros usuários usando as propriedades desta classe, isso reduz a complexidade e tamanho do código,
+            já que não é mais necessário reinicializar variáveis diferentes para cada usuário como era necessário no
+            exemplo procedural.</p>
+        <p class=" first-letter  text-secondary">Outro ponto positivo é que agora podemos esconder parte da complexidade
+            do código dentro da classe, deixando a responsabilidade por conta dos métodos internos da classe.</p>
+
+        <p class=" first-letter  text-secondary">Espero que tenha sido informativo.</p>
+        <h1 class="m-auto text-h text-center">Fontes</h1>
+        <br>
+        <p class="text-secondary"><a
+                href="https://www.devmedia.com.br/conceitos-encapsulamento-programacao-orientada-a-objetos/18702"
+                class="text-dark">
+                https://www.devmedia.com.br/conceitos-encapsulamento-programacao-orientada-a-objetos/18702</a>
+        </p>
+        <p class="text-secondary">
+            <a href=" https://www.youtube.com/watch?v=pTB0EiLXUC8&ab_channel=ProgrammingwithMosh" class="text-dark">
+                https://www.youtube.com/watch?v=pTB0EiLXUC8&ab_channel=ProgrammingwithMosh.</a>
+        </p>
+    </article>
+
+    <br>
+    <footer>
+        <table class="table-align ">
+            <tr>
+                <th>
+                    <p class="font-weight-light text-center Text-Capitalized text-secondary"><a class="text-secondary"
+                            href="../about.html">Entre em contato.</a></p>
+                </th>
+                <th>
+                    <p class="font-weight-light text-center Text-Capitalized text-secondary">
+                        @2020Brasilia</p>
+                </th>
+            </tr>
+        </table>
+
+    </footer>
+</body>
+
+</html>
